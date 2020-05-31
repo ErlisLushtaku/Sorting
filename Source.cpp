@@ -21,7 +21,7 @@ void quickSort(int v[], int low, int high) {
 
     if (low < high) {
         int m = ndarja(v, low, high); // O(N)
-        // v[low..high] ~> v[low..m–1], aksi, v[m+1..high]
+        // v[low..high] ~> v[low..mâ€“1], aksi, v[m+1..high]
         quickSort(v, low, m - 1); // sortojme nenvargun e majte me rekurzion
         // v[m] = aksi eshte tashme ne vendin e duhur pas funksionit ndarja
         quickSort(v, m + 1, high); // sortojme nenvargun e djathte
@@ -50,7 +50,7 @@ void randomQuickSort(int v[], int low, int high) {
 
     if (low < high) {
         int m = ndarjaRandom(v, low, high); // O(N)
-        // v[low..high] ~> v[low..m–1], aksi, v[m+1..high]
+        // v[low..high] ~> v[low..mâ€“1], aksi, v[m+1..high]
         quickSort(v, low, m - 1); // sortojme nenvargun e majte me rekurzion
         // v[m] = aksi eshte tashme ne vendin e duhur pas funksionit ndarja
         quickSort(v, m + 1, high); // sortojme nenvargun e djathte
@@ -102,47 +102,3 @@ int main() {
 
 	return 0;
 }
-
-//void f(int v[], int n, int x) {
-//
-//	for (int i = 0; i < n; i++)
-//	{
-//		v[i] = 0;
-//	}
-//	x = 5;
-//
-//	cout << "Ne funksion: ";
-//	for (int i = 0; i < n; i++)
-//	{
-//		cout << v[i] << " ";
-//	}
-//	cout << endl;
-//	cout << "Ne funksion: x = " << x << endl << endl;
-//}
-//
-//int main() {
-//
-//	const int n = 10;
-//    int v[n] = { 4, 6, 2, 5, 3, 1, 0, 13, 7, 25 };
-//	int x = 10;
-//
-//	cout << "Para funksionit: ";
-//	for (int i = 0; i < n; i++)
-//	{
-//		cout << v[i] << " ";
-//	}
-//	cout << endl;
-//	cout << "Para funksionit: x = " << x << endl << endl;
-//
-//	f(v, n, x);
-//
-//	cout << "Pas funksionit: ";
-//	for (int i = 0; i < n; i++)
-//    {
-//        cout << v[i] << " ";
-//    }
-//	cout << endl;
-//	cout << "Pas funksionit: x = " << x << endl << endl;
-//
-//	return 0;
-//}
